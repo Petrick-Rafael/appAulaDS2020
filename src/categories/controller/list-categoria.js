@@ -31,7 +31,7 @@ $(document).ready(function() {
                 }
             },
             {
-                "data": "idcategorias",
+                "data": "idcategoria",
                 "orderable": false,
                 "serchable": false,
                 "className": "text-center",
