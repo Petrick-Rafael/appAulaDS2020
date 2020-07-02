@@ -6,9 +6,9 @@
 
         $requestData = $_REQUEST;
 
-        $id = isset($requestData['idcategoria']) ? $requestData['idcategoria'] : '';
+        $id = isset($requestData['idcategorias']) ? $requestData['idcategorias'] : '';
 
-        $sql = "SELECT * FROM categorias WHERE idcategoria = $id ";
+        $sql = "SELECT * FROM categorias WHERE idcategorias = $id ";
         $resultado = mysqli_query($conexao, $sql);
 
         if($resultado && mysqli_num_rows($resultado) > 0){

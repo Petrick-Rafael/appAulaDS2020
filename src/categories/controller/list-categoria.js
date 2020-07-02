@@ -10,7 +10,7 @@ $(document).ready(function() {
             "url": "libs/DataTables/dataTables.brazil.json"
         },
         "columns": [{
-                "data": "idcategoria",
+                "data": "idcategorias",
                 "className": "text-center"
             },
             {
@@ -18,7 +18,7 @@ $(document).ready(function() {
                 "className": "text-center"
             },
             {
-                "data": "datamodificacao",
+                "data": "data_modificacao",
                 "className": "text-center"
             },
             {
@@ -31,7 +31,7 @@ $(document).ready(function() {
                 }
             },
             {
-                "data": "idcategoria",
+                "data": "idcategorias",
                 "orderable": false,
                 "serchable": false,
                 "className": "text-center",

@@ -8,17 +8,17 @@ $(document).ready(function() {
 
         $('.modal-tile').append('Visualização de categoria')
 
-        let idcategoria = `idcategoria=${$(this).attr('id')}`
+        let idcategorias = `idcategorias=${$(this).attr('id')}`
 
         $.ajax({
             type: 'POST',
             dataType: 'JSON',
             assync: true,
-            data: idcategoria,
+            data: idcategorias,
             url: 'src/categories/model/view-categoria.php',
             success: function(dado) {
                 if (dado.tipo == "success") {
-                    $('.modal-body').load('src/categorias/visao/form-categoria.html', function() {
+                    $('.modal-body').load('src/categories/view/form-categoria.html', function() {
                         $('#nome').val(dado.dados.nome)
                         $('#nome').attr('readonly', 'true')
                         $('#dataagora').val(dado.dados.nome)
