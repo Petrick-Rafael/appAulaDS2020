@@ -5,7 +5,7 @@ include('../../banco/conexao.php');
 if(!$conexao){
     $dados = array(
         'tipo' => 'info',
-        'mensagem' => 'Conexão inalcançada'
+        'mensagem' => 'Falha na Conexão'
     );
 } else{
 
@@ -34,7 +34,7 @@ if(!$conexao){
         $date = date_create_from_format('d/m/Y H:i:s', $requestData['dataagora']);
         $requestData['dataagora'] = date_format($date, 'Y-m-d H:i:s');
 
-        $sqlComando = "INSERT INTO categorias (nome, ativo, data_criacao, data_modificacao)
+        $sqlComando = "INSERT INTO categorias (nome, ativo, datacriacao, datamodificacao)
          VALUES ('$nome', '$requestData[ativo]', '$requestData[dataagora]', '$requestData[dataagora]')";
 
          $resultado = mysqli_query($conexao, $sqlComando);

@@ -8,13 +8,13 @@ $(document).ready(function() {
 
         $('.modal-tile').append('Visualização de categoria')
 
-        let idcategorias = `idcategorias=${$(this).attr('id')}`
+        let idcategoria = `idcategoria=${$(this).attr('id')}`
 
         $.ajax({
             type: 'POST',
             dataType: 'JSON',
             assync: true,
-            data: idcategorias,
+            data: idcategoria,
             url: 'src/categories/model/view-categoria.php',
             success: function(dado) {
                 if (dado.tipo == "success") {
