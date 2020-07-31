@@ -32,7 +32,7 @@ if(!$conexao){
         $requestData['ativo'] = $requestData['ativo'] == "on" ? "S" : "N";
 
         $date = date_create_from_format('d/m/Y H:i:s', $requestData['dataagora']);
-        $requestData['dataagora'] = date_format($date, 'Y-m-d H:i:s');
+        $requestData['dataagora'] = date_format($date, 'Y-d-m H:i:s');
 
         $sqlComando = "INSERT INTO categorias (nome, ativo, datacriacao, datamodificacao)
          VALUES ('$nome', '$requestData[ativo]', '$requestData[dataagora]', '$requestData[dataagora]')";

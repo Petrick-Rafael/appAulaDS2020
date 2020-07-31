@@ -15,8 +15,8 @@
             $id = isset($requestData['idcategoria']) ? $requestData['idcategoria'] : '';
             $requestData['ativo'] = $requestData['ativo'] == "on" ? "S" : "N";
 
-            $date = date_create_from_format('d/m/Y H:i:s', $requestData['dataagora']);
-            $requestData['dataagora'] = date_format('Y-m-d H:i:s',$requestData['dataagora']);
+            // $date = date_create_from_format('d/m/Y H:i:s', $requestData['dataagora']);
+            $requestData['dataagora'] = date('Y-d-m H:i:s', strtotime($requestData['dataagora']));
 
             $sql = "UPDATE categorias SET nome = '$requestData[nome]', ativo = '$requestData[ativo]', datamodificacao = '$requestData[dataagora]' WHERE idcategoria = $id ";
 
